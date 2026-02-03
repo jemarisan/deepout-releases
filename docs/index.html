@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepOut - Support</title>
+    <title>DeepOut - Support | 支持</title>
     <style>
         :root {
             --color-primary: #007AFF;
@@ -46,6 +46,10 @@
             padding: 80px 24px;
         }
         
+        .header {
+            margin-bottom: 48px;
+        }
+        
         .logo {
             font-size: 32px;
             font-weight: 700;
@@ -56,14 +60,36 @@
         .tagline {
             color: var(--color-text-secondary);
             font-size: 16px;
-            margin-bottom: 48px;
         }
         
-        h1 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            letter-spacing: -0.3px;
+        .lang-switch {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            gap: 8px;
+        }
+        
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg);
+            color: var(--color-text-secondary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        
+        .lang-btn.active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
         }
         
         .nav {
@@ -81,6 +107,13 @@
         
         .nav a:hover {
             opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
         }
         
         .section {
@@ -108,7 +141,38 @@
         .contact-box h3 {
             font-size: 16px;
             font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
             margin-bottom: 12px;
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--color-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+        
+        .contact-info .label {
+            font-size: 12px;
+            color: var(--color-text-secondary);
+        }
+        
+        .contact-info .value {
+            font-size: 15px;
         }
         
         .contact-box a {
@@ -156,68 +220,132 @@
         footer a:hover {
             color: var(--color-primary);
         }
+        
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+    </div>
+    
     <div class="container">
-        <div class="logo">DeepOut</div>
-        <div class="tagline">Think deep & mark down</div>
+        <div class="header">
+            <div class="logo">DeepOut</div>
+            <div class="tagline" data-en="Think deep & mark down" data-zh="深度思考，自然流出">Think deep & mark down</div>
+        </div>
         
         <nav class="nav">
-            <a href="index.html">Support</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
+            <a href="index.html" data-en="Support" data-zh="支持">Support</a>
+            <a href="privacy.html" data-en="Privacy" data-zh="隐私政策">Privacy</a>
+            <a href="terms.html" data-en="Terms" data-zh="服务条款">Terms</a>
         </nav>
         
-        <h1>Support</h1>
+        <h1 data-en="Support" data-zh="用户支持">Support</h1>
         
         <div class="section">
-            <h2>About DeepOut</h2>
-            <p>DeepOut is a minimalist Markdown editor designed for content creators and prompt engineers. Built with Tauri, React, and Rust for a native, fast experience.</p>
+            <h2 data-en="About DeepOut" data-zh="关于 DeepOut">About DeepOut</h2>
+            <p data-en="DeepOut is a minimalist Markdown editor designed for content creators and prompt engineers. Built with Tauri, React, and Rust for a native, fast experience." 
+               data-zh="DeepOut 是一款为内容创作者和提示词工程师打造的极简 Markdown 编辑器。采用 Tauri、React 和 Rust 构建，提供原生、流畅的使用体验。">
+                DeepOut is a minimalist Markdown editor designed for content creators and prompt engineers. Built with Tauri, React, and Rust for a native, fast experience.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Frequently Asked Questions</h2>
+            <h2 data-en="Frequently Asked Questions" data-zh="常见问题">Frequently Asked Questions</h2>
             
             <div class="faq-item">
-                <h3>How do I get started?</h3>
-                <p>Simply open the app and start writing. DeepOut uses standard Markdown syntax with real-time preview.</p>
+                <h3 data-en="How do I get started?" data-zh="如何开始使用？">How do I get started?</h3>
+                <p data-en="Simply open the app and start writing. DeepOut uses standard Markdown syntax with real-time preview." 
+                   data-zh="打开应用即可开始写作。DeepOut 使用标准 Markdown 语法，支持实时预览。">
+                    Simply open the app and start writing. DeepOut uses standard Markdown syntax with real-time preview.
+                </p>
             </div>
             
             <div class="faq-item">
-                <h3>How do I use the AI features?</h3>
-                <p>Go to Settings → AI to configure your preferred AI model. You can use the built-in service or connect your own API key.</p>
+                <h3 data-en="How do I use the AI features?" data-zh="如何使用 AI 功能？">How do I use the AI features?</h3>
+                <p data-en="Go to Settings → AI to configure your preferred AI model. You can use the built-in service or connect your own API key." 
+                   data-zh="进入 设置 → AI 配置您偏好的 AI 模型。您可以使用内置服务或连接自己的 API 密钥。">
+                    Go to Settings → AI to configure your preferred AI model. You can use the built-in service or connect your own API key.
+                </p>
             </div>
             
             <div class="faq-item">
-                <h3>Where are my files stored?</h3>
-                <p>Files are stored locally on your device in the location you choose. DeepOut respects your privacy and keeps your data under your control.</p>
+                <h3 data-en="Where are my files stored?" data-zh="我的文件存储在哪里？">Where are my files stored?</h3>
+                <p data-en="Files are stored locally on your device in the location you choose. DeepOut respects your privacy and keeps your data under your control." 
+                   data-zh="文件存储在您设备本地的指定位置。DeepOut 尊重您的隐私，让您完全掌控自己的数据。">
+                    Files are stored locally on your device in the location you choose. DeepOut respects your privacy and keeps your data under your control.
+                </p>
             </div>
             
             <div class="faq-item">
-                <h3>How do I restore a subscription?</h3>
-                <p>Go to Settings → Subscription and tap "Restore Purchases" to restore any previous subscriptions.</p>
+                <h3 data-en="How do I restore a subscription?" data-zh="如何恢复订阅？">How do I restore a subscription?</h3>
+                <p data-en="Go to Settings → Subscription and tap 'Restore Purchases' to restore any previous subscriptions." 
+                   data-zh="进入 设置 → 订阅，点击「恢复购买」即可恢复之前的订阅。">
+                    Go to Settings → Subscription and tap "Restore Purchases" to restore any previous subscriptions.
+                </p>
             </div>
             
             <div class="faq-item">
-                <h3>How do I cancel my subscription?</h3>
-                <p>Subscriptions are managed through the App Store. Go to System Settings → Apple ID → Subscriptions to manage or cancel.</p>
+                <h3 data-en="How do I cancel my subscription?" data-zh="如何取消订阅？">How do I cancel my subscription?</h3>
+                <p data-en="Subscriptions are managed through the App Store. Go to System Settings → Apple ID → Subscriptions to manage or cancel." 
+                   data-zh="订阅通过 App Store 管理。前往 系统设置 → Apple ID → 订阅 进行管理或取消。">
+                    Subscriptions are managed through the App Store. Go to System Settings → Apple ID → Subscriptions to manage or cancel.
+                </p>
             </div>
         </div>
         
         <div class="contact-box">
-            <h3>Need more help?</h3>
-            <p>Contact us at <a href="mailto:deep8down@outlook.com">deep8down@outlook.com</a></p>
-            <p style="margin-top: 8px;">We typically respond within 24 hours.</p>
+            <h3 data-en="Contact Us" data-zh="联系我们">Contact Us</h3>
+            
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-info">
+                    <div class="label" data-en="Email" data-zh="邮箱">Email</div>
+                    <div class="value"><a href="mailto:18127353451@163.com">18127353451@163.com</a></div>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div class="contact-info">
+                    <div class="label" data-en="WeChat Official Account" data-zh="微信公众号">WeChat Official Account</div>
+                    <div class="value">JEMARISAN</div>
+                </div>
+            </div>
+            
+            <p style="margin-top: 16px; font-size: 14px;" data-en="We typically respond within 24 hours." data-zh="我们通常会在 24 小时内回复。">
+                We typically respond within 24 hours.
+            </p>
         </div>
         
         <footer>
-            <p>© 2026 DeepOut. All rights reserved.</p>
+            <p>© 2026 JEMARISAN. All rights reserved.</p>
             <p style="margin-top: 8px;">
-                <a href="privacy.html">Privacy Policy</a> · 
-                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a> · 
+                <a href="terms.html" data-en="Terms of Use" data-zh="服务条款">Terms of Use</a>
             </p>
         </footer>
     </div>
+    
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="switchLang('${lang}')"]`).classList.add('active');
+            
+            document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+            
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            localStorage.setItem('deepout-lang', lang);
+        }
+        
+        // Auto-detect language
+        const savedLang = localStorage.getItem('deepout-lang');
+        const browserLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+        switchLang(savedLang || browserLang);
+    </script>
 </body>
 </html>

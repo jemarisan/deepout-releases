@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - DeepOut</title>
+    <title>Privacy Policy | 隐私政策 - DeepOut</title>
     <style>
         :root {
             --color-primary: #007AFF;
@@ -46,6 +46,10 @@
             padding: 80px 24px;
         }
         
+        .header {
+            margin-bottom: 48px;
+        }
+        
         .logo {
             font-size: 32px;
             font-weight: 700;
@@ -56,20 +60,36 @@
         .tagline {
             color: var(--color-text-secondary);
             font-size: 16px;
-            margin-bottom: 48px;
         }
         
-        h1 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            letter-spacing: -0.3px;
+        .lang-switch {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            gap: 8px;
         }
         
-        .last-updated {
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg);
             color: var(--color-text-secondary);
+            border-radius: 6px;
+            cursor: pointer;
             font-size: 14px;
-            margin-bottom: 32px;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        
+        .lang-btn.active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
         }
         
         .nav {
@@ -87,6 +107,19 @@
         
         .nav a:hover {
             opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+        
+        .last-updated {
+            color: var(--color-text-secondary);
+            font-size: 14px;
+            margin-bottom: 32px;
         }
         
         .section {
@@ -114,6 +147,15 @@
             margin-bottom: 8px;
         }
         
+        .section a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .section a:hover {
+            text-decoration: underline;
+        }
+        
         footer {
             margin-top: 64px;
             padding-top: 24px;
@@ -130,92 +172,160 @@
         footer a:hover {
             color: var(--color-primary);
         }
+        
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+    </div>
+    
     <div class="container">
-        <div class="logo">DeepOut</div>
-        <div class="tagline">Think deep & mark down</div>
+        <div class="header">
+            <div class="logo">DeepOut</div>
+            <div class="tagline" data-en="Think deep & mark down" data-zh="深度思考，自然流出">Think deep & mark down</div>
+        </div>
         
         <nav class="nav">
-            <a href="index.html">Support</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
+            <a href="index.html" data-en="Support" data-zh="支持">Support</a>
+            <a href="privacy.html" data-en="Privacy" data-zh="隐私政策">Privacy</a>
+            <a href="terms.html" data-en="Terms" data-zh="服务条款">Terms</a>
         </nav>
         
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: February 4, 2026</p>
+        <h1 data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</h1>
+        <p class="last-updated" data-en="Last updated: February 4, 2026" data-zh="最后更新：2026年2月4日">Last updated: February 4, 2026</p>
         
         <div class="section">
-            <h2>Overview</h2>
-            <p>DeepOut is designed with privacy as a core principle. Your documents and creative work remain on your device and under your control.</p>
+            <h2 data-en="Overview" data-zh="概述">Overview</h2>
+            <p data-en="DeepOut is designed with privacy as a core principle. Your documents and creative work remain on your device and under your control." 
+               data-zh="DeepOut 以隐私保护为核心设计原则。您的文档和创作内容始终保存在您的设备上，由您完全掌控。">
+                DeepOut is designed with privacy as a core principle. Your documents and creative work remain on your device and under your control.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Data We Collect</h2>
-            <p><strong>We collect minimal data:</strong></p>
+            <h2 data-en="Data We Collect" data-zh="我们收集的数据">Data We Collect</h2>
+            <p data-en="We collect minimal data:" data-zh="我们仅收集极少量数据："><strong>We collect minimal data:</strong></p>
             <ul>
-                <li><strong>Account Information:</strong> If you purchase a subscription through the App Store, Apple handles the transaction. We receive only a transaction receipt to verify your subscription status.</li>
-                <li><strong>Crash Reports:</strong> Anonymous crash reports may be collected to improve app stability. These contain no personal content.</li>
+                <li data-en="Account Information: If you purchase a subscription through the App Store, Apple handles the transaction. We receive only a transaction receipt to verify your subscription status." 
+                    data-zh="账户信息：如果您通过 App Store 购买订阅，Apple 负责处理交易。我们仅接收交易凭证用于验证您的订阅状态。">
+                    <strong>Account Information:</strong> If you purchase a subscription through the App Store, Apple handles the transaction. We receive only a transaction receipt to verify your subscription status.
+                </li>
+                <li data-en="Crash Reports: Anonymous crash reports may be collected to improve app stability. These contain no personal content." 
+                    data-zh="崩溃报告：可能会收集匿名崩溃报告以改善应用稳定性。这些报告不包含任何个人内容。">
+                    <strong>Crash Reports:</strong> Anonymous crash reports may be collected to improve app stability. These contain no personal content.
+                </li>
             </ul>
         </div>
         
         <div class="section">
-            <h2>Data We Do NOT Collect</h2>
+            <h2 data-en="Data We Do NOT Collect" data-zh="我们不收集的数据">Data We Do NOT Collect</h2>
             <ul>
-                <li>Your documents, notes, or any content you create</li>
-                <li>Your file system or folder structure</li>
-                <li>Personal identifiers beyond what's needed for subscription verification</li>
-                <li>Usage patterns or behavioral data</li>
+                <li data-en="Your documents, notes, or any content you create" data-zh="您的文档、笔记或任何创作内容">Your documents, notes, or any content you create</li>
+                <li data-en="Your file system or folder structure" data-zh="您的文件系统或文件夹结构">Your file system or folder structure</li>
+                <li data-en="Personal identifiers beyond what's needed for subscription verification" data-zh="除订阅验证所需之外的任何个人身份信息">Personal identifiers beyond what's needed for subscription verification</li>
+                <li data-en="Usage patterns or behavioral data" data-zh="使用模式或行为数据">Usage patterns or behavioral data</li>
             </ul>
         </div>
         
         <div class="section">
-            <h2>AI Features</h2>
-            <p>When you use AI features, your prompts are sent to the AI service provider you have configured (e.g., GLM, OpenAI). Please refer to the respective provider's privacy policy for how they handle your data.</p>
-            <p>You can use your own API keys to maintain direct control over your AI interactions.</p>
+            <h2 data-en="AI Features" data-zh="AI 功能">AI Features</h2>
+            <p data-en="When you use AI features, your prompts are sent to the AI service provider you have configured (e.g., GLM, OpenAI). Please refer to the respective provider's privacy policy for how they handle your data." 
+               data-zh="当您使用 AI 功能时，您的提示词会发送给您配置的 AI 服务商（如 GLM、OpenAI）。请参阅相应服务商的隐私政策了解他们如何处理您的数据。">
+                When you use AI features, your prompts are sent to the AI service provider you have configured (e.g., GLM, OpenAI). Please refer to the respective provider's privacy policy for how they handle your data.
+            </p>
+            <p data-en="You can use your own API keys to maintain direct control over your AI interactions." 
+               data-zh="您可以使用自己的 API 密钥，直接控制您的 AI 交互。">
+                You can use your own API keys to maintain direct control over your AI interactions.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Local Data Storage</h2>
-            <p>All your documents are stored locally on your device. We do not have access to your files. Backup and sync are handled through your own iCloud or file system preferences.</p>
+            <h2 data-en="Local Data Storage" data-zh="本地数据存储">Local Data Storage</h2>
+            <p data-en="All your documents are stored locally on your device. We do not have access to your files. Backup and sync are handled through your own iCloud or file system preferences." 
+               data-zh="您的所有文档都存储在本地设备上。我们无法访问您的文件。备份和同步通过您自己的 iCloud 或文件系统偏好设置进行。">
+                All your documents are stored locally on your device. We do not have access to your files. Backup and sync are handled through your own iCloud or file system preferences.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Third-Party Services</h2>
+            <h2 data-en="Third-Party Services" data-zh="第三方服务">Third-Party Services</h2>
             <ul>
-                <li><strong>Apple App Store:</strong> Handles subscription payments and management</li>
-                <li><strong>AI Providers:</strong> Only when you explicitly use AI features</li>
+                <li data-en="Apple App Store: Handles subscription payments and management" data-zh="Apple App Store：处理订阅支付和管理"><strong>Apple App Store:</strong> Handles subscription payments and management</li>
+                <li data-en="AI Providers: Only when you explicitly use AI features" data-zh="AI 服务商：仅在您主动使用 AI 功能时"><strong>AI Providers:</strong> Only when you explicitly use AI features</li>
             </ul>
         </div>
         
         <div class="section">
-            <h2>Data Security</h2>
-            <p>DeepOut runs in a sandboxed environment with access only to folders you explicitly grant permission to. Your data never leaves your device unless you choose to use cloud-based AI features.</p>
+            <h2 data-en="Data Security" data-zh="数据安全">Data Security</h2>
+            <p data-en="DeepOut runs in a sandboxed environment with access only to folders you explicitly grant permission to. Your data never leaves your device unless you choose to use cloud-based AI features." 
+               data-zh="DeepOut 在沙盒环境中运行，仅能访问您明确授权的文件夹。除非您选择使用云端 AI 功能，否则您的数据永远不会离开您的设备。">
+                DeepOut runs in a sandboxed environment with access only to folders you explicitly grant permission to. Your data never leaves your device unless you choose to use cloud-based AI features.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Children's Privacy</h2>
-            <p>DeepOut does not knowingly collect information from children under 13. The app is designed for general audiences.</p>
+            <h2 data-en="Children's Privacy" data-zh="儿童隐私">Children's Privacy</h2>
+            <p data-en="DeepOut does not knowingly collect information from children under 13. The app is designed for general audiences." 
+               data-zh="DeepOut 不会故意收集 13 岁以下儿童的信息。本应用面向一般用户群体设计。">
+                DeepOut does not knowingly collect information from children under 13. The app is designed for general audiences.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+            <h2 data-en="Changes to This Policy" data-zh="政策变更">Changes to This Policy</h2>
+            <p data-en="We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the 'Last updated' date." 
+               data-zh="我们可能会不时更新本隐私政策。我们会通过在此页面发布新的隐私政策并更新「最后更新」日期来通知您任何变更。">
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:deep8down@outlook.com" style="color: var(--color-primary);">deep8down@outlook.com</a></p>
+            <h2 data-en="Contact Us" data-zh="联系我们">Contact Us</h2>
+            <p data-en="If you have any questions about this Privacy Policy, please contact us at" 
+               data-zh="如果您对本隐私政策有任何疑问，请通过以下方式联系我们：">
+                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:18127353451@163.com">18127353451@163.com</a>
+            </p>
         </div>
         
         <footer>
-            <p>© 2026 DeepOut. All rights reserved.</p>
+            <p>© 2026 JEMARISAN. All rights reserved.</p>
             <p style="margin-top: 8px;">
-                <a href="privacy.html">Privacy Policy</a> · 
-                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a> · 
+                <a href="terms.html" data-en="Terms of Use" data-zh="服务条款">Terms of Use</a>
             </p>
         </footer>
     </div>
+    
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="switchLang('${lang}')"]`).classList.add('active');
+            
+            document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+            
+            // Handle the contact email link specially
+            const contactSection = document.querySelector('.section:last-of-type p');
+            if (contactSection) {
+                if (lang === 'zh') {
+                    contactSection.innerHTML = '如果您对本隐私政策有任何疑问，请通过以下方式联系我们：<a href="mailto:18127353451@163.com">18127353451@163.com</a>';
+                } else {
+                    contactSection.innerHTML = 'If you have any questions about this Privacy Policy, please contact us at <a href="mailto:18127353451@163.com">18127353451@163.com</a>';
+                }
+            }
+            
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            localStorage.setItem('deepout-lang', lang);
+        }
+        
+        // Auto-detect language
+        const savedLang = localStorage.getItem('deepout-lang');
+        const browserLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+        switchLang(savedLang || browserLang);
+    </script>
 </body>
 </html>

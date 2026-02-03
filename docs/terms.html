@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use - DeepOut</title>
+    <title>Terms of Use | 服务条款 - DeepOut</title>
     <style>
         :root {
             --color-primary: #007AFF;
@@ -46,6 +46,10 @@
             padding: 80px 24px;
         }
         
+        .header {
+            margin-bottom: 48px;
+        }
+        
         .logo {
             font-size: 32px;
             font-weight: 700;
@@ -56,20 +60,36 @@
         .tagline {
             color: var(--color-text-secondary);
             font-size: 16px;
-            margin-bottom: 48px;
         }
         
-        h1 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            letter-spacing: -0.3px;
+        .lang-switch {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            gap: 8px;
         }
         
-        .last-updated {
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg);
             color: var(--color-text-secondary);
+            border-radius: 6px;
+            cursor: pointer;
             font-size: 14px;
-            margin-bottom: 32px;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        
+        .lang-btn.active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
         }
         
         .nav {
@@ -87,6 +107,19 @@
         
         .nav a:hover {
             opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+        
+        .last-updated {
+            color: var(--color-text-secondary);
+            font-size: 14px;
+            margin-bottom: 32px;
         }
         
         .section {
@@ -114,6 +147,15 @@
             margin-bottom: 8px;
         }
         
+        .section a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .section a:hover {
+            text-decoration: underline;
+        }
+        
         footer {
             margin-top: 64px;
             padding-top: 24px;
@@ -130,109 +172,189 @@
         footer a:hover {
             color: var(--color-primary);
         }
+        
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+    </div>
+    
     <div class="container">
-        <div class="logo">DeepOut</div>
-        <div class="tagline">Think deep & mark down</div>
+        <div class="header">
+            <div class="logo">DeepOut</div>
+            <div class="tagline" data-en="Think deep & mark down" data-zh="深度思考，自然流出">Think deep & mark down</div>
+        </div>
         
         <nav class="nav">
-            <a href="index.html">Support</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
+            <a href="index.html" data-en="Support" data-zh="支持">Support</a>
+            <a href="privacy.html" data-en="Privacy" data-zh="隐私政策">Privacy</a>
+            <a href="terms.html" data-en="Terms" data-zh="服务条款">Terms</a>
         </nav>
         
-        <h1>Terms of Use</h1>
-        <p class="last-updated">Last updated: February 4, 2026</p>
+        <h1 data-en="Terms of Use" data-zh="服务条款">Terms of Use</h1>
+        <p class="last-updated" data-en="Last updated: February 4, 2026" data-zh="最后更新：2026年2月4日">Last updated: February 4, 2026</p>
         
         <div class="section">
-            <h2>Agreement to Terms</h2>
-            <p>By downloading, installing, or using DeepOut ("the App"), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the App.</p>
+            <h2 data-en="Agreement to Terms" data-zh="条款同意">Agreement to Terms</h2>
+            <p data-en="By downloading, installing, or using DeepOut ('the App'), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the App." 
+               data-zh="下载、安装或使用 DeepOut（以下简称「本应用」）即表示您同意受本服务条款的约束。如果您不同意这些条款，请勿使用本应用。">
+                By downloading, installing, or using DeepOut ("the App"), you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the App.
+            </p>
         </div>
         
         <div class="section">
-            <h2>License</h2>
-            <p>DeepOut grants you a limited, non-exclusive, non-transferable, revocable license to use the App for personal or commercial purposes, subject to these Terms and the Apple App Store Terms of Service.</p>
+            <h2 data-en="License" data-zh="许可">License</h2>
+            <p data-en="DeepOut grants you a limited, non-exclusive, non-transferable, revocable license to use the App for personal or commercial purposes, subject to these Terms and the Apple App Store Terms of Service." 
+               data-zh="DeepOut 授予您有限的、非独占的、不可转让的、可撤销的许可，允许您将本应用用于个人或商业目的，但须遵守本条款和 Apple App Store 服务条款。">
+                DeepOut grants you a limited, non-exclusive, non-transferable, revocable license to use the App for personal or commercial purposes, subject to these Terms and the Apple App Store Terms of Service.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Subscriptions</h2>
-            <p>DeepOut offers auto-renewable subscriptions that provide access to premium features:</p>
+            <h2 data-en="Subscriptions" data-zh="订阅">Subscriptions</h2>
+            <p data-en="DeepOut offers auto-renewable subscriptions that provide access to premium features:" 
+               data-zh="DeepOut 提供自动续订的订阅服务，可解锁高级功能：">
+                DeepOut offers auto-renewable subscriptions that provide access to premium features:
+            </p>
             <ul>
-                <li><strong>Pro Monthly:</strong> Billed monthly</li>
-                <li><strong>Pro Yearly:</strong> Billed annually</li>
-                <li><strong>Pro+ Monthly:</strong> Billed monthly, includes advanced AI features</li>
-                <li><strong>Pro+ Yearly:</strong> Billed annually, includes advanced AI features</li>
+                <li data-en="Pro Monthly: Billed monthly" data-zh="Pro 月度版：按月计费"><strong>Pro Monthly:</strong> Billed monthly</li>
+                <li data-en="Pro Yearly: Billed annually" data-zh="Pro 年度版：按年计费"><strong>Pro Yearly:</strong> Billed annually</li>
+                <li data-en="Pro+ Monthly: Billed monthly, includes advanced AI features" data-zh="Pro+ 月度版：按月计费，包含高级 AI 功能"><strong>Pro+ Monthly:</strong> Billed monthly, includes advanced AI features</li>
+                <li data-en="Pro+ Yearly: Billed annually, includes advanced AI features" data-zh="Pro+ 年度版：按年计费，包含高级 AI 功能"><strong>Pro+ Yearly:</strong> Billed annually, includes advanced AI features</li>
             </ul>
-            <p>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
-            <p>You can manage and cancel subscriptions in your Apple ID account settings. No refunds will be provided for the unused portion of a subscription term.</p>
+            <p data-en="Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period." 
+               data-zh="订阅将自动续订，除非在当前订阅期结束前至少 24 小时取消。您的账户将在当前订阅期结束前 24 小时内被扣除续订费用。">
+                Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.
+            </p>
+            <p data-en="You can manage and cancel subscriptions in your Apple ID account settings. No refunds will be provided for the unused portion of a subscription term." 
+               data-zh="您可以在 Apple ID 账户设置中管理和取消订阅。订阅期内未使用的部分不予退款。">
+                You can manage and cancel subscriptions in your Apple ID account settings. No refunds will be provided for the unused portion of a subscription term.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Free Trial</h2>
-            <p>If offered, the free trial period allows you to experience premium features before subscribing. If you do not cancel before the trial ends, your subscription will automatically begin and you will be charged.</p>
+            <h2 data-en="Free Trial" data-zh="免费试用">Free Trial</h2>
+            <p data-en="If offered, the free trial period allows you to experience premium features before subscribing. If you do not cancel before the trial ends, your subscription will automatically begin and you will be charged." 
+               data-zh="如提供免费试用，试用期内您可以体验高级功能。如果您在试用期结束前未取消，订阅将自动开始并收费。">
+                If offered, the free trial period allows you to experience premium features before subscribing. If you do not cancel before the trial ends, your subscription will automatically begin and you will be charged.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Your Content</h2>
-            <p>You retain all rights to the content you create using DeepOut. We do not claim any ownership over your documents, notes, or other materials.</p>
-            <p>You are responsible for ensuring that your content does not violate any laws or third-party rights.</p>
+            <h2 data-en="Your Content" data-zh="您的内容">Your Content</h2>
+            <p data-en="You retain all rights to the content you create using DeepOut. We do not claim any ownership over your documents, notes, or other materials." 
+               data-zh="您保留使用 DeepOut 创作的所有内容的全部权利。我们不对您的文档、笔记或其他材料主张任何所有权。">
+                You retain all rights to the content you create using DeepOut. We do not claim any ownership over your documents, notes, or other materials.
+            </p>
+            <p data-en="You are responsible for ensuring that your content does not violate any laws or third-party rights." 
+               data-zh="您有责任确保您的内容不违反任何法律或第三方权利。">
+                You are responsible for ensuring that your content does not violate any laws or third-party rights.
+            </p>
         </div>
         
         <div class="section">
-            <h2>AI Features</h2>
-            <p>DeepOut includes AI-powered features. When using these features:</p>
+            <h2 data-en="AI Features" data-zh="AI 功能">AI Features</h2>
+            <p data-en="DeepOut includes AI-powered features. When using these features:" 
+               data-zh="DeepOut 包含 AI 驱动的功能。使用这些功能时：">
+                DeepOut includes AI-powered features. When using these features:
+            </p>
             <ul>
-                <li>You are responsible for reviewing AI-generated content before use</li>
-                <li>AI outputs may not always be accurate or appropriate</li>
-                <li>You agree to comply with the terms of the AI service providers</li>
+                <li data-en="You are responsible for reviewing AI-generated content before use" data-zh="您有责任在使用前审核 AI 生成的内容">You are responsible for reviewing AI-generated content before use</li>
+                <li data-en="AI outputs may not always be accurate or appropriate" data-zh="AI 输出可能并不总是准确或恰当">AI outputs may not always be accurate or appropriate</li>
+                <li data-en="You agree to comply with the terms of the AI service providers" data-zh="您同意遵守 AI 服务提供商的条款">You agree to comply with the terms of the AI service providers</li>
             </ul>
         </div>
         
         <div class="section">
-            <h2>Prohibited Uses</h2>
-            <p>You agree not to:</p>
+            <h2 data-en="Prohibited Uses" data-zh="禁止行为">Prohibited Uses</h2>
+            <p data-en="You agree not to:" data-zh="您同意不会：">You agree not to:</p>
             <ul>
-                <li>Reverse engineer, decompile, or disassemble the App</li>
-                <li>Use the App for any illegal or unauthorized purpose</li>
-                <li>Attempt to bypass any security measures</li>
-                <li>Redistribute or resell the App</li>
+                <li data-en="Reverse engineer, decompile, or disassemble the App" data-zh="对本应用进行逆向工程、反编译或反汇编">Reverse engineer, decompile, or disassemble the App</li>
+                <li data-en="Use the App for any illegal or unauthorized purpose" data-zh="将本应用用于任何非法或未经授权的目的">Use the App for any illegal or unauthorized purpose</li>
+                <li data-en="Attempt to bypass any security measures" data-zh="试图绕过任何安全措施">Attempt to bypass any security measures</li>
+                <li data-en="Redistribute or resell the App" data-zh="再分发或转售本应用">Redistribute or resell the App</li>
             </ul>
         </div>
         
         <div class="section">
-            <h2>Disclaimer of Warranties</h2>
-            <p>The App is provided "as is" without warranties of any kind, either express or implied. We do not guarantee that the App will be error-free or uninterrupted.</p>
+            <h2 data-en="Disclaimer of Warranties" data-zh="免责声明">Disclaimer of Warranties</h2>
+            <p data-en="The App is provided 'as is' without warranties of any kind, either express or implied. We do not guarantee that the App will be error-free or uninterrupted." 
+               data-zh="本应用按「现状」提供，不提供任何明示或暗示的保证。我们不保证本应用无错误或不间断运行。">
+                The App is provided "as is" without warranties of any kind, either express or implied. We do not guarantee that the App will be error-free or uninterrupted.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Limitation of Liability</h2>
-            <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data or profits, arising from your use of the App.</p>
+            <h2 data-en="Limitation of Liability" data-zh="责任限制">Limitation of Liability</h2>
+            <p data-en="To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data or profits, arising from your use of the App." 
+               data-zh="在法律允许的最大范围内，我们不对因您使用本应用而产生的任何间接、附带、特殊、后果性或惩罚性损害承担责任，包括数据或利润损失。">
+                To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data or profits, arising from your use of the App.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Changes to Terms</h2>
-            <p>We reserve the right to modify these Terms at any time. We will notify you of significant changes by updating the "Last updated" date. Continued use of the App after changes constitutes acceptance of the new Terms.</p>
+            <h2 data-en="Changes to Terms" data-zh="条款变更">Changes to Terms</h2>
+            <p data-en="We reserve the right to modify these Terms at any time. We will notify you of significant changes by updating the 'Last updated' date. Continued use of the App after changes constitutes acceptance of the new Terms." 
+               data-zh="我们保留随时修改本条款的权利。我们将通过更新「最后更新」日期来通知您重大变更。在变更后继续使用本应用即表示接受新条款。">
+                We reserve the right to modify these Terms at any time. We will notify you of significant changes by updating the "Last updated" date. Continued use of the App after changes constitutes acceptance of the new Terms.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Governing Law</h2>
-            <p>These Terms shall be governed by the laws of the People's Republic of China, without regard to its conflict of law provisions.</p>
+            <h2 data-en="Governing Law" data-zh="适用法律">Governing Law</h2>
+            <p data-en="These Terms shall be governed by the laws of the People's Republic of China, without regard to its conflict of law provisions." 
+               data-zh="本条款受中华人民共和国法律管辖，不考虑其法律冲突条款。">
+                These Terms shall be governed by the laws of the People's Republic of China, without regard to its conflict of law provisions.
+            </p>
         </div>
         
         <div class="section">
-            <h2>Contact Us</h2>
-            <p>If you have any questions about these Terms, please contact us at <a href="mailto:deep8down@outlook.com" style="color: var(--color-primary);">deep8down@outlook.com</a></p>
+            <h2 data-en="Contact Us" data-zh="联系我们">Contact Us</h2>
+            <p data-en="If you have any questions about these Terms, please contact us at" 
+               data-zh="如果您对本服务条款有任何疑问，请通过以下方式联系我们：">
+                If you have any questions about these Terms, please contact us at <a href="mailto:18127353451@163.com">18127353451@163.com</a>
+            </p>
         </div>
         
         <footer>
-            <p>© 2026 DeepOut. All rights reserved.</p>
+            <p>© 2026 JEMARISAN. All rights reserved.</p>
             <p style="margin-top: 8px;">
-                <a href="privacy.html">Privacy Policy</a> · 
-                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a> · 
+                <a href="terms.html" data-en="Terms of Use" data-zh="服务条款">Terms of Use</a>
             </p>
         </footer>
     </div>
+    
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="switchLang('${lang}')"]`).classList.add('active');
+            
+            document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+            
+            // Handle the contact email link specially
+            const contactSection = document.querySelector('.section:last-of-type p');
+            if (contactSection) {
+                if (lang === 'zh') {
+                    contactSection.innerHTML = '如果您对本服务条款有任何疑问，请通过以下方式联系我们：<a href="mailto:18127353451@163.com">18127353451@163.com</a>';
+                } else {
+                    contactSection.innerHTML = 'If you have any questions about these Terms, please contact us at <a href="mailto:18127353451@163.com">18127353451@163.com</a>';
+                }
+            }
+            
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            localStorage.setItem('deepout-lang', lang);
+        }
+        
+        // Auto-detect language
+        const savedLang = localStorage.getItem('deepout-lang');
+        const browserLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
+        switchLang(savedLang || browserLang);
+    </script>
 </body>
 </html>
