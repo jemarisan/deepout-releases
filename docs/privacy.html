@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepOut - Support</title>
+    <title>Privacy Policy - DeepOut</title>
     <style>
         :root {
             --color-primary: #007AFF;
@@ -62,8 +62,14 @@
         h1 {
             font-size: 28px;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             letter-spacing: -0.3px;
+        }
+        
+        .last-updated {
+            color: var(--color-text-secondary);
+            font-size: 14px;
+            margin-bottom: 32px;
         }
         
         .nav {
@@ -84,13 +90,13 @@
         }
         
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
         
         .section h2 {
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         
         .section p {
@@ -98,46 +104,14 @@
             margin-bottom: 12px;
         }
         
-        .contact-box {
-            background: var(--color-bg-secondary);
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 32px;
-        }
-        
-        .contact-box h3 {
-            font-size: 16px;
-            font-weight: 600;
+        .section ul {
+            color: var(--color-text-secondary);
+            margin-left: 20px;
             margin-bottom: 12px;
         }
         
-        .contact-box a {
-            color: var(--color-primary);
-            text-decoration: none;
-        }
-        
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-        
-        .faq-item {
-            border-bottom: 1px solid var(--color-border);
-            padding: 20px 0;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .faq-item h3 {
-            font-size: 16px;
-            font-weight: 600;
+        .section li {
             margin-bottom: 8px;
-        }
-        
-        .faq-item p {
-            color: var(--color-text-secondary);
-            font-size: 15px;
         }
         
         footer {
@@ -169,46 +143,70 @@
             <a href="terms.html">Terms</a>
         </nav>
         
-        <h1>Support</h1>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: February 4, 2026</p>
         
         <div class="section">
-            <h2>About DeepOut</h2>
-            <p>DeepOut is a minimalist Markdown editor designed for content creators and prompt engineers. Built with Tauri, React, and Rust for a native, fast experience.</p>
+            <h2>Overview</h2>
+            <p>DeepOut is designed with privacy as a core principle. Your documents and creative work remain on your device and under your control.</p>
         </div>
         
         <div class="section">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <h3>How do I get started?</h3>
-                <p>Simply open the app and start writing. DeepOut uses standard Markdown syntax with real-time preview.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>How do I use the AI features?</h3>
-                <p>Go to Settings → AI to configure your preferred AI model. You can use the built-in service or connect your own API key.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Where are my files stored?</h3>
-                <p>Files are stored locally on your device in the location you choose. DeepOut respects your privacy and keeps your data under your control.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>How do I restore a subscription?</h3>
-                <p>Go to Settings → Subscription and tap "Restore Purchases" to restore any previous subscriptions.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>How do I cancel my subscription?</h3>
-                <p>Subscriptions are managed through the App Store. Go to System Settings → Apple ID → Subscriptions to manage or cancel.</p>
-            </div>
+            <h2>Data We Collect</h2>
+            <p><strong>We collect minimal data:</strong></p>
+            <ul>
+                <li><strong>Account Information:</strong> If you purchase a subscription through the App Store, Apple handles the transaction. We receive only a transaction receipt to verify your subscription status.</li>
+                <li><strong>Crash Reports:</strong> Anonymous crash reports may be collected to improve app stability. These contain no personal content.</li>
+            </ul>
         </div>
         
-        <div class="contact-box">
-            <h3>Need more help?</h3>
-            <p>Contact us at <a href="mailto:deep8down@outlook.com">deep8down@outlook.com</a></p>
-            <p style="margin-top: 8px;">We typically respond within 24 hours.</p>
+        <div class="section">
+            <h2>Data We Do NOT Collect</h2>
+            <ul>
+                <li>Your documents, notes, or any content you create</li>
+                <li>Your file system or folder structure</li>
+                <li>Personal identifiers beyond what's needed for subscription verification</li>
+                <li>Usage patterns or behavioral data</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>AI Features</h2>
+            <p>When you use AI features, your prompts are sent to the AI service provider you have configured (e.g., GLM, OpenAI). Please refer to the respective provider's privacy policy for how they handle your data.</p>
+            <p>You can use your own API keys to maintain direct control over your AI interactions.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Local Data Storage</h2>
+            <p>All your documents are stored locally on your device. We do not have access to your files. Backup and sync are handled through your own iCloud or file system preferences.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Third-Party Services</h2>
+            <ul>
+                <li><strong>Apple App Store:</strong> Handles subscription payments and management</li>
+                <li><strong>AI Providers:</strong> Only when you explicitly use AI features</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Data Security</h2>
+            <p>DeepOut runs in a sandboxed environment with access only to folders you explicitly grant permission to. Your data never leaves your device unless you choose to use cloud-based AI features.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Children's Privacy</h2>
+            <p>DeepOut does not knowingly collect information from children under 13. The app is designed for general audiences.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:deep8down@outlook.com" style="color: var(--color-primary);">deep8down@outlook.com</a></p>
         </div>
         
         <footer>
