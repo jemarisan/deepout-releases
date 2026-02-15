@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>百灵·Ling — 隐私政策 | Privacy Policy</title>
+  <style>
+    :root {
+      --primary: #7c6aff;
+      --bg: #0d0d12;
+      --bg-card: #16161e;
+      --text: #f0eef6;
+      --text-secondary: #8a8899;
+      --text-tertiary: #5c5a6a;
+      --border: rgba(124, 106, 255, 0.15);
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .lang-switch {
+      position: fixed; top: 20px; right: 24px; z-index: 100;
+      display: flex; gap: 6px;
+    }
+    .lang-btn {
+      padding: 5px 12px; border: 1px solid var(--border);
+      background: rgba(22,22,30,0.8); backdrop-filter: blur(12px);
+      color: var(--text-secondary); border-radius: 6px;
+      cursor: pointer; font-size: 13px; transition: all 0.2s;
+    }
+    .lang-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .lang-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .container { max-width: 720px; margin: 0 auto; padding: 80px 24px 60px; }
+    h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .updated { color: var(--text-tertiary); font-size: 14px; margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 600; margin: 36px 0 12px; }
+    p, li { color: var(--text-secondary); font-size: 15px; margin-bottom: 12px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { display: inline-block; margin-bottom: 32px; color: var(--text-secondary); font-size: 14px; }
+    .back:hover { color: var(--primary); }
+    footer {
+      text-align: center; padding: 40px 24px;
+      border-top: 1px solid rgba(124,106,255,0.08);
+      color: var(--text-tertiary); font-size: 13px;
+    }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+  </div>
+
+  <div class="container">
+    <a class="back" href="index.html" data-zh="&larr; 返回百灵首页" data-en="&larr; Back to Ling Home">&larr; 返回百灵首页</a>
+
+    <!-- Chinese Version -->
+    <div id="content-zh">
+      <h1>隐私政策</h1>
+      <p class="updated">最后更新：2026年2月15日</p>
+
+      <p>百灵·Ling（以下简称"百灵"或"本应用"）由 JEMARISAN 开发和运营。我们深知隐私对您的重要性，并致力于保护您的个人信息。本隐私政策说明我们如何处理您的数据。</p>
+
+      <h2>核心原则：100% 本地存储</h2>
+      <p>百灵采用 Local-First 架构。这意味着：</p>
+      <ul>
+        <li>您的所有数据（对话记录、角色描述、排练记录、行为分析、记忆数据）100% 存储在您的本地设备上</li>
+        <li>我们没有服务器、没有后端、没有云数据库</li>
+        <li>我们不收集、不存储、不传输您的个人数据到任何服务器</li>
+        <li>您的数据从未离开过您的手机 — 这是事实，不是承诺</li>
+      </ul>
+
+      <h2>网络请求</h2>
+      <p>百灵唯一的网络请求是 AI 模型 API 调用（如 DeepSeek、Gemini、Claude 等）。这些请求：</p>
+      <ul>
+        <li>直接从您的设备发送到 AI 服务商，无中间服务器</li>
+        <li>仅传输当次对话所需的最少上下文，不传输完整历史</li>
+        <li>排练分析发送的是结构化摘要，不是对话原文</li>
+        <li>受各 AI 服务商自身的隐私政策约束</li>
+      </ul>
+
+      <h2>数据加密</h2>
+      <ul>
+        <li>本地数据库采用 AES-256 加密</li>
+        <li>加密密钥由设备生物识别（Face ID / 指纹）保护</li>
+        <li>API Key 存储在操作系统级安全存储中（iOS Keychain / Android KeyStore），不存入普通数据库</li>
+      </ul>
+
+      <h2>我们不收集的信息</h2>
+      <ul>
+        <li>个人身份信息（姓名、邮箱、电话等）</li>
+        <li>位置信息</li>
+        <li>设备标识符</li>
+        <li>使用行为数据</li>
+        <li>对话内容</li>
+        <li>任何形式的用户数据</li>
+      </ul>
+
+      <h2>第三方服务</h2>
+      <p>百灵使用以下第三方 AI 服务（仅在您主动发起对话时调用）：</p>
+      <ul>
+        <li>DeepSeek — <a href="https://www.deepseek.com/privacy" target="_blank">隐私政策</a></li>
+        <li>Google Gemini — <a href="https://ai.google.dev/terms" target="_blank">服务条款</a></li>
+        <li>Anthropic Claude — <a href="https://www.anthropic.com/privacy" target="_blank">隐私政策</a></li>
+        <li>OpenAI — <a href="https://openai.com/privacy" target="_blank">隐私政策</a></li>
+      </ul>
+      <p>您可以选择使用自己的 API Key 直接连接这些服务，实现完全的零中间层访问。</p>
+
+      <h2>儿童隐私</h2>
+      <p>百灵不面向 13 岁以下的儿童。我们不会故意收集儿童的个人信息。</p>
+
+      <h2>隐私政策更新</h2>
+      <p>我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并更新"最后更新"日期。</p>
+
+      <h2>联系我们</h2>
+      <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+      <p>邮箱：<a href="mailto:18127353451@163.com">18127353451@163.com</a></p>
+    </div>
+
+    <!-- English Version -->
+    <div id="content-en" class="hidden">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: February 15, 2026</p>
+
+      <p>Ling (hereinafter "Ling" or "the App") is developed and operated by JEMARISAN. We understand the importance of your privacy and are committed to protecting your personal information. This Privacy Policy explains how we handle your data.</p>
+
+      <h2>Core Principle: 100% Local Storage</h2>
+      <p>Ling is built on a Local-First architecture. This means:</p>
+      <ul>
+        <li>All your data (conversations, character descriptions, rehearsal records, behavioral analysis, memory data) is stored 100% on your local device</li>
+        <li>We have no servers, no backend, no cloud database</li>
+        <li>We do not collect, store, or transmit your personal data to any server</li>
+        <li>Your data never leaves your phone — this is a fact, not a promise</li>
+      </ul>
+
+      <h2>Network Requests</h2>
+      <p>The only network requests Ling makes are AI model API calls (such as DeepSeek, Gemini, Claude, etc.). These requests:</p>
+      <ul>
+        <li>Are sent directly from your device to the AI provider, with no intermediary server</li>
+        <li>Only transmit the minimum context needed for the current conversation, not the full history</li>
+        <li>Send structured summaries for rehearsal analysis, not raw conversation text</li>
+        <li>Are subject to each AI provider's own privacy policy</li>
+      </ul>
+
+      <h2>Data Encryption</h2>
+      <ul>
+        <li>Local database is encrypted with AES-256</li>
+        <li>Encryption keys are protected by device biometrics (Face ID / Fingerprint)</li>
+        <li>API Keys are stored in OS-level secure storage (iOS Keychain / Android KeyStore), never in the regular database</li>
+      </ul>
+
+      <h2>Information We Do NOT Collect</h2>
+      <ul>
+        <li>Personal identification information (name, email, phone, etc.)</li>
+        <li>Location data</li>
+        <li>Device identifiers</li>
+        <li>Usage analytics</li>
+        <li>Conversation content</li>
+        <li>Any form of user data</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+      <p>Ling uses the following third-party AI services (only called when you actively initiate a conversation):</p>
+      <ul>
+        <li>DeepSeek — <a href="https://www.deepseek.com/privacy" target="_blank">Privacy Policy</a></li>
+        <li>Google Gemini — <a href="https://ai.google.dev/terms" target="_blank">Terms of Service</a></li>
+        <li>Anthropic Claude — <a href="https://www.anthropic.com/privacy" target="_blank">Privacy Policy</a></li>
+        <li>OpenAI — <a href="https://openai.com/privacy" target="_blank">Privacy Policy</a></li>
+      </ul>
+      <p>You can choose to use your own API Key to connect directly to these services for a completely zero-intermediary experience.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>Ling is not intended for children under 13. We do not knowingly collect personal information from children.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The updated policy will be posted on this page with a revised "Last updated" date.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <p>Email: <a href="mailto:18127353451@163.com">18127353451@163.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 JEMARISAN. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.lang-btn[onclick="switchLang('${lang}')"]`).classList.add('active');
+      document.getElementById('content-zh').classList.toggle('hidden', lang !== 'zh');
+      document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+      document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + lang);
+      });
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      localStorage.setItem('ling-lang', lang);
+    }
+    const saved = localStorage.getItem('ling-lang');
+    const browser = navigator.language.startsWith('zh') ? 'zh' : 'en';
+    switchLang(saved || browser);
+  </script>
+</body>
+</html>

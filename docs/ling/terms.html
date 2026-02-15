@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>百灵·Ling — 使用条款 | Terms of Use</title>
+  <style>
+    :root {
+      --primary: #7c6aff;
+      --bg: #0d0d12;
+      --bg-card: #16161e;
+      --text: #f0eef6;
+      --text-secondary: #8a8899;
+      --text-tertiary: #5c5a6a;
+      --border: rgba(124, 106, 255, 0.15);
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .lang-switch {
+      position: fixed; top: 20px; right: 24px; z-index: 100;
+      display: flex; gap: 6px;
+    }
+    .lang-btn {
+      padding: 5px 12px; border: 1px solid var(--border);
+      background: rgba(22,22,30,0.8); backdrop-filter: blur(12px);
+      color: var(--text-secondary); border-radius: 6px;
+      cursor: pointer; font-size: 13px; transition: all 0.2s;
+    }
+    .lang-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .lang-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .container { max-width: 720px; margin: 0 auto; padding: 80px 24px 60px; }
+    h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .updated { color: var(--text-tertiary); font-size: 14px; margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 600; margin: 36px 0 12px; }
+    p, li { color: var(--text-secondary); font-size: 15px; margin-bottom: 12px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { display: inline-block; margin-bottom: 32px; color: var(--text-secondary); font-size: 14px; }
+    .back:hover { color: var(--primary); }
+    footer {
+      text-align: center; padding: 40px 24px;
+      border-top: 1px solid rgba(124,106,255,0.08);
+      color: var(--text-tertiary); font-size: 13px;
+    }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+  </div>
+
+  <div class="container">
+    <a class="back" href="index.html" data-zh="&larr; 返回百灵首页" data-en="&larr; Back to Ling Home">&larr; 返回百灵首页</a>
+
+    <!-- Chinese Version -->
+    <div id="content-zh">
+      <h1>使用条款</h1>
+      <p class="updated">最后更新：2026年2月15日</p>
+
+      <p>欢迎使用百灵·Ling（以下简称"百灵"或"本应用"）。使用本应用即表示您同意以下条款。</p>
+
+      <h2>1. 服务描述</h2>
+      <p>百灵是一款 AI 驱动的人生排练与社交应用。您可以通过灵卡（LingCard）描述真实关系人，与 AI 好友聊天，并在安全环境中预演高风险对话。</p>
+
+      <h2>2. 使用要求</h2>
+      <ul>
+        <li>您必须年满 13 周岁才能使用本应用</li>
+        <li>您需要自行负责设备的安全和数据备份</li>
+        <li>您不得将本应用用于任何违法目的</li>
+      </ul>
+
+      <h2>3. 数据所有权</h2>
+      <p>您在百灵中创建的所有内容（对话、角色描述、排练记录等）完全属于您。由于百灵采用 100% 本地存储架构，我们无法访问、查看或控制您的数据。</p>
+
+      <h2>4. AI 服务</h2>
+      <ul>
+        <li>百灵通过第三方 AI 服务商提供 AI 对话功能</li>
+        <li>AI 生成的内容仅供参考，不构成专业建议（包括但不限于心理咨询、法律建议、医疗建议）</li>
+        <li>AI 服务的可用性取决于第三方服务商，我们不保证服务的持续可用</li>
+        <li>使用内置 API Key 时，我们设有月度消费上限</li>
+      </ul>
+
+      <h2>5. 灵卡分享</h2>
+      <ul>
+        <li>您可以自由分享您创建的灵卡</li>
+        <li>分享灵卡时，请确保不包含他人的敏感个人信息</li>
+        <li>灵卡的密码学签名和贡献链记录用于溯源，不可伪造</li>
+      </ul>
+
+      <h2>6. 免责声明</h2>
+      <ul>
+        <li>百灵提供的排练功能旨在帮助用户练习沟通技巧，不替代专业心理咨询或治疗</li>
+        <li>AI 角色的回应是模拟生成的，不代表真实人物的实际反应</li>
+        <li>我们不对因使用本应用做出的任何现实决定承担责任</li>
+      </ul>
+
+      <h2>7. 知识产权</h2>
+      <p>百灵应用本身（包括但不限于代码、设计、品牌标识）的知识产权归 JEMARISAN 所有。Pika 灵卡协议为开放标准。</p>
+
+      <h2>8. 条款变更</h2>
+      <p>我们可能会不时更新本使用条款。更新后的条款将在本页面发布。继续使用本应用即表示您接受更新后的条款。</p>
+
+      <h2>9. 联系方式</h2>
+      <p>如有任何疑问，请联系：<a href="mailto:18127353451@163.com">18127353451@163.com</a></p>
+    </div>
+
+    <!-- English Version -->
+    <div id="content-en" class="hidden">
+      <h1>Terms of Use</h1>
+      <p class="updated">Last updated: February 15, 2026</p>
+
+      <p>Welcome to Ling. By using this application, you agree to the following terms.</p>
+
+      <h2>1. Service Description</h2>
+      <p>Ling is an AI-powered life rehearsal and social application. You can describe real people through LingCards, chat with AI friends, and rehearse high-stakes conversations in a safe environment.</p>
+
+      <h2>2. Usage Requirements</h2>
+      <ul>
+        <li>You must be at least 13 years old to use this application</li>
+        <li>You are responsible for your device's security and data backup</li>
+        <li>You may not use this application for any unlawful purpose</li>
+      </ul>
+
+      <h2>3. Data Ownership</h2>
+      <p>All content you create in Ling (conversations, character descriptions, rehearsal records, etc.) belongs entirely to you. Since Ling uses 100% local storage, we cannot access, view, or control your data.</p>
+
+      <h2>4. AI Services</h2>
+      <ul>
+        <li>Ling provides AI conversation features through third-party AI service providers</li>
+        <li>AI-generated content is for reference only and does not constitute professional advice (including but not limited to psychological counseling, legal advice, or medical advice)</li>
+        <li>AI service availability depends on third-party providers; we do not guarantee continuous availability</li>
+        <li>When using the built-in API Key, monthly spending limits are in place</li>
+      </ul>
+
+      <h2>5. LingCard Sharing</h2>
+      <ul>
+        <li>You may freely share LingCards you create</li>
+        <li>When sharing LingCards, ensure they do not contain sensitive personal information of others</li>
+        <li>Cryptographic signatures and contribution chains on LingCards are used for provenance and cannot be forged</li>
+      </ul>
+
+      <h2>6. Disclaimer</h2>
+      <ul>
+        <li>Ling's rehearsal features are designed to help users practice communication skills and do not replace professional counseling or therapy</li>
+        <li>AI character responses are simulated and do not represent the actual reactions of real people</li>
+        <li>We are not responsible for any real-world decisions made based on using this application</li>
+      </ul>
+
+      <h2>7. Intellectual Property</h2>
+      <p>The intellectual property of the Ling application itself (including but not limited to code, design, brand identity) belongs to JEMARISAN. The Pika LingCard Protocol is an open standard.</p>
+
+      <h2>8. Changes to Terms</h2>
+      <p>We may update these Terms of Use from time to time. Updated terms will be posted on this page. Continued use of the application constitutes acceptance of the updated terms.</p>
+
+      <h2>9. Contact</h2>
+      <p>For any questions, please contact: <a href="mailto:18127353451@163.com">18127353451@163.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 JEMARISAN. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.lang-btn[onclick="switchLang('${lang}')"]`).classList.add('active');
+      document.getElementById('content-zh').classList.toggle('hidden', lang !== 'zh');
+      document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+      document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + lang);
+      });
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      localStorage.setItem('ling-lang', lang);
+    }
+    const saved = localStorage.getItem('ling-lang');
+    const browser = navigator.language.startsWith('zh') ? 'zh' : 'en';
+    switchLang(saved || browser);
+  </script>
+</body>
+</html>
